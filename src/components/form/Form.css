@@ -1,0 +1,35 @@
+form {
+  display: flex;
+}
+
+.todo-input {
+  font-size: 20px;
+  border: none;
+}
+
+.todo-input:focus {
+  outline: none;
+  
+}
+
+.select-todo {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+  background-color: white;
+}
+
+.add-todo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 4px 0 0 6px;
+  margin-right: 4px;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.add-todo:hover {
+  background-color: #eeeeee;
+}
