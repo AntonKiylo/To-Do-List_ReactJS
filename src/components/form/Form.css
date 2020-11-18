@@ -3,13 +3,13 @@ form {
 }
 
 .todo-input {
+  margin: 0 10px;
   font-size: 20px;
   border: none;
 }
 
 .todo-input:focus {
   outline: none;
-  
 }
 
 .select-todo {
@@ -21,15 +21,11 @@ form {
 }
 
 .add-todo {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
   padding: 4px 0 0 6px;
-  margin-right: 4px;
   cursor: pointer;
-  transition: 500ms;
+  transition: 400ms;
 }
 
 .add-todo:hover {
-  background-color: #eeeeee;
+  color: rgb(28, 28, 255);
 }

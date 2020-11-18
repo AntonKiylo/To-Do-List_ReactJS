@@ -1,7 +1,13 @@
 .todo {
-  display: flex;
+  background-color: #eaeaea;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 8px 0;
+  animation-name: animate-todo;
+  animation-duration: 400ms;
 }
 
-.todo-text {
-  width: 100%;
+@keyframes animate-todo {
+  from {transform: scale(0, 0);}
+  to {transform: scale(1, 1);}
 }

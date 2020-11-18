@@ -1,31 +1,27 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import Text from '../text/Text'
+import Input from '../input/Input'
 import './ToDo.css'
 
 const ToDo = ({text, todo, todos, setTodos}) => {
-  const removeHandler = () => {
-    setTodos(todos.filter(item => item.id !== todo.id))
-  }
+  const [editState, setEditState] = useState(false)
+  const inputElement = useRef(null)
 
-  const checkComplitingHandler = () => {
-    setTodos(todos.map(item => (item.id === todo.id) ? {...item, complited: !item.complited} : item))
-  }
+  /* useEffect(() => {
+    inputElement.current.focus()
+  }, [inputElement]) */
 
   return(
-    <div className='todo'>
-      <div onClick={checkComplitingHandler}>
-        <i className="material-icons">
-          {todo.complited ? 'check_circle_outline' : 'radio_button_unchecked'}
-        </i>
+      <div className='todo'>
+        {
+          editState
+          ?
+          <Input setTodos={setTodos} text={text} editState={editState} setEditState={setEditState} inputElement={inputElement} todo={todo} todos={todos} />
+          :
+          <Text text={text} inputElement={inputElement} todo={todo} todos={todos} setTodos={setTodos} editState={editState} setEditState={setEditState} />
+        }
       </div>
 
-      <li style={{'textDecoration': todo.complited ? 'line-through' : 'none'}} className='todo-text'>
-        {text}
-      </li>
-      
-      <div onClick={removeHandler}>
-        <i className="material-icons">delete</i>
-      </div>
-    </div>
   )
 }
 

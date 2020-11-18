@@ -11,6 +11,15 @@ const App = () => {
   const [filtered, setFiltered] = useState([])
 
   useEffect(() => {
+    if (localStorage.getItem('todos') === null) {
+    localStorage.setItem('todos', JSON.stringify([]))
+    } else {
+      let todoLocal =  JSON.parse(localStorage.getItem('todos'))
+      setTodos(todoLocal)
+    }
+  }, [])
+
+  useEffect(() => {
     switch (status) {
       case 'complited':
         setFiltered(todos.filter(todo => todo.complited === true))
@@ -22,8 +31,11 @@ const App = () => {
         setFiltered(todos)
         break
     }
+    
+    localStorage.setItem('todos', JSON.stringify(todos))
+
   }, [todos, status])
-  
+
   return(
     <>
       <Header title='To-Do List' />

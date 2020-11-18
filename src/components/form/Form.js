@@ -32,8 +32,8 @@ const Form = ({ todos, setTodos, inputText, setInputText, setStatus }) => {
 
   return(
     <form onSubmit={ onHandlerSubmit }>
-      <div type='submit' className='add-todo' onClick={onHandlerSubmit}>
-        <i className="material-icons">add</i>
+      <div type='submit' onClick={onHandlerSubmit}>
+        <i className="material-icons add-todo">add</i>
       </div>
       <input
         type="text"

@@ -1,0 +1,27 @@
+.text-wrapper {
+  display: flex;
+}
+
+.todo-text {
+  width: 100%;
+  overflow-wrap: anywhere;
+  margin: 0 10px;
+}
+
+.check, .delete, .edit {
+  height: fit-content;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.edit {
+  margin-right: 10px;
+}
+
+.delete:hover {
+  color: #ff4646;
+}
+
+.edit:hover {
+  color: rgb(28, 28, 255);
+}
