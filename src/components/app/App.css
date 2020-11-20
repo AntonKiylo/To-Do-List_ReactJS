@@ -1,16 +1,26 @@
+.app {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  background-color: #fff;
+}
+
+.nightMode {
+  background-color: #18191a;
+}
+
+.nightMode .header {
+  background-color: #242526;
+  border-color: #393a3b;
+}
+
+.nightMode .header h1 {
+  color: #fff;
+}
+
 section {
-  min-width: 280px;
-  width: 500px;
-  margin: 0 auto;
+  overflow-y: auto;
+  padding-top: 25px;
   font-size: 20px;
 }
 
-@media (max-width: 600px){
-  section {
-    width: 280px;
-  }
-
-  .todo-input {
-    width: 110px;
-  }
-}

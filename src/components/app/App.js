@@ -9,6 +9,7 @@ const App = () => {
   const [todos, setTodos] = useState([])
   const [status, setStatus] = useState('all')
   const [filtered, setFiltered] = useState([])
+  const [nightMode, setNightMode] = useState(false)
 
   useEffect(() => {
     if (localStorage.getItem('todos') === null) {
@@ -37,8 +38,8 @@ const App = () => {
   }, [todos, status])
 
   return(
-    <>
-      <Header title='To-Do List' />
+    <div className={`app ${nightMode ? 'nightMode' : ''}`}>
+      <Header title='To-Do List' nightMode={nightMode} setNightMode={setNightMode} />
       <section>
         <Form
           todos={todos}
@@ -49,7 +50,7 @@ const App = () => {
         />
         <ToDoList todos={todos} setTodos={setTodos} filtered={filtered} />
       </section>
-    </>
+    </div>
   )
 }
 

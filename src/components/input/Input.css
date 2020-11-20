@@ -1,0 +1,27 @@
+.input-wrapper {
+  display: flex;
+  animation-name: animate-input;
+  animation-duration: 200ms;
+}
+
+.input-wrapper input {
+  font-size: 20px;
+  border: none;
+  width: 100%;
+  outline: none;
+  border-radius: 6px;
+}
+
+.done {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.done:hover {
+  color: rgb(28, 28, 255);
+}
+
+@keyframes animate-input {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

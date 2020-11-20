@@ -1,16 +1,18 @@
 import React from 'react'
 import './Text.css'
 
-const Text = ({todo, todos, text, setTodos, editState, setEditState, inputElement}) => {
+const Text = ({todo, todos, text, setTodos, editState, setEditState, showToDo, setShowToDo}) => {
+  
   const removeHandler = () => {
-    setTodos(todos.filter(item => item.id !== todo.id))
+    setShowToDo(!showToDo)
+
+    setTimeout(() => {
+      setTodos(todos.filter(item => item.id !== todo.id))
+    }, 350)
   }
 
   const editHandler = () => {
     setEditState(!editState)
-    setTimeout(() => {
-      inputElement.current.focus()
-    }, 0)
   }
 
   const checkComplitingHandler = () => {

@@ -1,11 +1,16 @@
 form {
   display: flex;
+  min-width: 280px;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .todo-input {
-  margin: 0 10px;
+  margin-right: 10px;
   font-size: 20px;
   border: none;
+  padding: 0 6px;
+  width: 100%;
 }
 
 .todo-input:focus {
@@ -21,11 +26,16 @@ form {
 }
 
 .add-todo {
-  padding: 4px 0 0 6px;
   cursor: pointer;
   transition: 400ms;
 }
 
 .add-todo:hover {
   color: rgb(28, 28, 255);
+}
+
+@media (max-width: 600px){
+  form {
+    width: 350px;
+  }
 }

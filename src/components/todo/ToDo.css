@@ -1,13 +1,27 @@
 .todo {
-  background-color: #eaeaea;
+  background-color: #f0f2f5;
   border-radius: 8px;
   padding: 10px;
   margin: 8px 0;
-  animation-name: animate-todo;
-  animation-duration: 400ms;
+  
 }
 
-@keyframes animate-todo {
+.todo-in {
+  animation-name: animate-todo-in;
+  animation-duration: 350ms;
+}
+
+.todo-out {
+  animation-name: animate-todo-out;
+  animation-duration: 350ms;
+}
+
+@keyframes animate-todo-in {
   from {transform: scale(0, 0);}
   to {transform: scale(1, 1);}
+}
+
+@keyframes animate-todo-out {
+  from {transform: scale(1, 1);}
+  to {transform: scale(0, 0);}
 }
