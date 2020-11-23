@@ -1,7 +1,8 @@
 import React from 'react'
 import './Form.css'
 
-const Form = ({ todos, setTodos, inputText, setInputText, setStatus }) => {
+const Form = ({ todos, setTodos, inputText, setInputText, setViewStatus }) => {
+  
   const inputChangeHandler = e => {
     setInputText(e.target.value)
   }
@@ -18,16 +19,14 @@ const Form = ({ todos, setTodos, inputText, setInputText, setStatus }) => {
           id: new Date().getTime()
         }
       ])
-  
       setInputText('')
     } else {
       return
     }
-    
   }
 
   const handlerStatus = e => {
-    setStatus(e.target.value)
+    setViewStatus(e.target.value)
   }
 
   return(

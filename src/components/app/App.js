@@ -7,8 +7,8 @@ import './App.css'
 const App = () => {
   const [inputText, setInputText] = useState('')
   const [todos, setTodos] = useState([])
-  const [status, setStatus] = useState('all')
-  const [filtered, setFiltered] = useState([])
+  const [viewStatus, setViewStatus] = useState('all')
+  const [filteredTodos, setFilteredTodos] = useState([])
   const [nightMode, setNightMode] = useState(false)
 
   useEffect(() => {
@@ -21,21 +21,21 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-    switch (status) {
+    switch (viewStatus) {
       case 'complited':
-        setFiltered(todos.filter(todo => todo.complited === true))
+        setFilteredTodos(todos.filter(todo => todo.complited === true))
         break
       case 'uncomplited':
-        setFiltered(todos.filter(todo => todo.complited === false))
+        setFilteredTodos(todos.filter(todo => todo.complited === false))
         break
       default:
-        setFiltered(todos)
+        setFilteredTodos(todos)
         break
     }
     
     localStorage.setItem('todos', JSON.stringify(todos))
 
-  }, [todos, status])
+  }, [todos, viewStatus])
 
   return(
     <div className={`app ${nightMode ? 'nightMode' : ''}`}>
@@ -46,9 +46,9 @@ const App = () => {
           setTodos={setTodos}
           inputText={inputText}
           setInputText={setInputText}
-          setStatus={setStatus}
+          setViewStatus={setViewStatus}
         />
-        <ToDoList todos={todos} setTodos={setTodos} filtered={filtered} />
+        <ToDoList todos={todos} setTodos={setTodos} filteredTodos={filteredTodos} />
       </section>
     </div>
   )

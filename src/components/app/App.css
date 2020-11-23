@@ -3,19 +3,7 @@
   display: grid;
   grid-template-rows: 80px 1fr;
   background-color: #fff;
-}
-
-.nightMode {
-  background-color: #18191a;
-}
-
-.nightMode .header {
-  background-color: #242526;
-  border-color: #393a3b;
-}
-
-.nightMode .header h1 {
-  color: #fff;
+  color: #81817d;
 }
 
 section {
@@ -24,3 +12,31 @@ section {
   font-size: 20px;
 }
 
+.nightMode {
+  background-color: #18191a;
+  color: #fff;
+}
+
+.nightMode .header {
+  background-color: #242526;
+  border-color: #393a3b;
+}
+
+.nightMode .todo-input {
+  background-color: #18191a;
+  color: #fff;
+}
+
+.nightMode .select-todo {
+  background-color: #18191a;
+  color: #fff;
+}
+
+.nightMode .todo {
+  background-color: #333435;
+}
+
+.nightMode .input-wrapper input {
+  color: #fff;
+  background-color: #18191a;
+}

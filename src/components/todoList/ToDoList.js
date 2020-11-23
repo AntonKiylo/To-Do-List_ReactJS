@@ -2,8 +2,8 @@ import React from 'react'
 import ToDo from '../todo/ToDo'
 import './ToDoList.css'
 
-const ToDoList = ({todos, setTodos, filtered}) => {
-  const todoList = filtered.map(todo => {
+const ToDoList = ({todos, setTodos, filteredTodos}) => {
+  const todoList = filteredTodos.map(todo => {
     return(
       <ToDo
         todo={todo}

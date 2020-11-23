@@ -2,7 +2,7 @@ import React from 'react'
 import './Header.css'
 
 const Header = ({nightMode, setNightMode, title}) => {
-  const handlerChange = () => {
+  const changeViewMode = () => {
     setNightMode(!nightMode)
   }
 
@@ -11,7 +11,7 @@ const Header = ({nightMode, setNightMode, title}) => {
       <h1>{title}</h1>
 
       <div>
-        <input className="input-switch" id="switch2" type="checkbox" name="switch" onChange={handlerChange} />
+        <input className="input-switch" id="switch2" type="checkbox" name="switch" onChange={changeViewMode} />
         <label htmlFor="switch2">
           <span className="switch-label off">Off</span>
           <span className="switch-label on">On</span>
