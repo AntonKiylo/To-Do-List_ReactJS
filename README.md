@@ -1,4 +1,4 @@
-# To-Do-List: https://antonkiylo.github.io/To-Do-List_ReactJS/
+To-Do-List: https://antonkiylo.github.io/To-Do-List_ReactJS/
 
 # Getting Started with Create React App
 
